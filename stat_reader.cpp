@@ -8,15 +8,6 @@ namespace detail{
 
 using namespace std;
 
-string GetNameFromReq(string_view text) {
-    // find name
-    int64_t space = text.find(' ');
-    text.remove_prefix(space + 1);
-    int64_t name_end = text.find(':');
-    string stop_name = string(text.substr(0,name_end));
-    text.remove_prefix(name_end + 2);
-    return stop_name;
-}
 
 std::vector<std::pair<RequestType,std::string>> ReadGetRequest(){
     std::vector<std::pair<RequestType,std::string>> res;
@@ -25,9 +16,9 @@ std::vector<std::pair<RequestType,std::string>> ReadGetRequest(){
     for(int i = 0;i < req_num; ++i) {
         getline(cin, req);
         if(GetReqType(req) == RequestType::BUS){
-            res.push_back({RequestType::BUS, GetNameFromReq(req)});
+            res.push_back({RequestType::BUS, req.substr(4,req.find(':'))});
         } else {
-            res.push_back({RequestType::STOP, GetNameFromReq(req)});
+            res.push_back({RequestType::STOP, req.substr(5,req.find(':'))});
         }
     }
     return res;
@@ -40,7 +31,7 @@ void PrintBus(string_view name, const TransportCatalogue::Bus* bus) {
     } else {
         cout << "Bus "s << name << ": "s
                         << bus->stops.size() << " stops on route, "s
-                        << set(bus->stops.begin(),bus->stops.end()).size() << " unique stops, "s
+                        << bus->uniq_stop_number << " unique stops, "s
                         << setprecision(6)
                         << bus->real_route_len << " route length, "s
                         << bus->real_route_len / bus->route_len << " curvature"s << endl;

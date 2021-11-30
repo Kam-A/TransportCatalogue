@@ -23,6 +23,7 @@ public:
         std::vector<const Stop*> stops;
         double route_len;
         double real_route_len;
+        int64_t uniq_stop_number;
     };
     struct PairStopsHasher {
         size_t operator()(const std::pair<const Stop*, const Stop*> stops_pair) const {

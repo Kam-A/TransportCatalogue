@@ -94,9 +94,12 @@ TransportCatalogue::Bus TransportCatalogue::GetBusInfoFromReq(string_view text) 
     res.name = GetNameFromReq(text);
     res.real_route_len = 0;
     res.route_len = 0;
+    unordered_set<string_view> unique_stops;
     for (const string_view bus_stop : GetAllStops(text)) {
         res.stops.push_back(GetStopByName(bus_stop));
+        unique_stops.insert(bus_stop);
     }
+    res.uniq_stop_number = unique_stops.size();
     for(int i = 0; i < res.stops.size() - 1; ++i){
         res.route_len += ComputeDistance(res.stops[i]->coord,
                                 res.stops[i + 1]->coord);
