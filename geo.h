@@ -2,8 +2,8 @@
 
 #include <cmath>
 
-namespace transport_catalogue{
-namespace detail{
+namespace transport_catalogue {
+namespace detail {
 
 struct Coordinates {
     double lat;

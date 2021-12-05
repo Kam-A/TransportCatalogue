@@ -1,58 +1,60 @@
-#include "stat_reader.h"
-#include "input_reader.h"
 #include <iostream>
 #include <iomanip>
 
-namespace transport_catalogue{
-namespace detail{
+#include "input_reader.h"
+#include "stat_reader.h"
+
+namespace transport_catalogue {
+namespace stat_reader {
 
 using namespace std;
 
-
-std::vector<std::pair<RequestType,std::string>> ReadGetRequest(){
-    std::vector<std::pair<RequestType,std::string>> res;
-    int req_num = ReadLineWithNumber();
-    string req;
-    for(int i = 0;i < req_num; ++i) {
-        getline(cin, req);
-        if(GetReqType(req) == RequestType::BUS){
-            res.push_back({RequestType::BUS, req.substr(4,req.find(':'))});
-        } else {
-            res.push_back({RequestType::STOP, req.substr(5,req.find(':'))});
+void RequestProcess(TransportCatalogue& catalogue, std::istream& input, std::ostream& output) {
+    int request_num = detail::ReadLineWithNumber(input);
+    string request;
+    for(int i = 0; i < request_num; ++i) {
+        getline(input, request);
+        input_reader::RequestType request_type = input_reader::GetRequestType(request);
+        if(request_type == input_reader::RequestType::BUS) {
+            PrintBusInfo(catalogue, request.substr(4, request.npos), output);
+        } else if (request_type == input_reader::RequestType::STOP) {
+            PrintStop(catalogue, request.substr(5, request.npos), output);
         }
     }
-    return res;
 }
 
-void PrintBus(string_view name, const TransportCatalogue::Bus* bus) {
+void PrintBusInfo(TransportCatalogue& catalogue, string_view name, ostream& output) {
+    const TransportCatalogue::Bus* bus = catalogue.GetBusByName(name);
     if (bus == nullptr) {
-        cout << "Bus "s << name << ": not found"s << endl;
+        output << "Bus "s << name << ": not found"s << endl;
         
     } else {
-        cout << "Bus "s << name << ": "s
-                        << bus->stops.size() << " stops on route, "s
-                        << bus->uniq_stop_number << " unique stops, "s
+        TransportCatalogue::BusInfo bus_info = catalogue.GetBusInfoByBus(bus);
+        output << "Bus "s << name << ": "s
+                        << bus_info.stops_number << " stops on route, "s
+                        << bus_info.unique_stop_number << " unique stops, "s
                         << setprecision(6)
-                        << bus->real_route_len << " route length, "s
-                        << bus->real_route_len / bus->route_len << " curvature"s << endl;
+                        << bus_info.real_route_length << " route length, "s
+                        << bus_info.real_route_length / bus_info.route_length << " curvature"s << endl;
         
     }
     
 }
 
-void PrintStop(string_view name, optional<vector<string_view>> buses) {
+void PrintStop(TransportCatalogue& catalogue, string_view name, ostream& output) {
+    optional<vector<string_view>> buses = catalogue.GetBusesByStopName(name);
     if (buses) {
         if (buses.value().size() != 0) {
-            cout << "Stop "s << name << ": buses "s;
+            output << "Stop "s << name << ": buses "s;
             for(string_view bus : buses.value()) {
-                cout << bus << " "s ;
+                output << bus << " "s ;
             }
         } else {
-            cout << "Stop "s << name << ": no buses"s;
+            output << "Stop "s << name << ": no buses"s;
         }
-        cout << endl;
+        output << endl;
     } else {
-        cout << "Stop "s << name << ": not found"s << endl;
+        output << "Stop "s << name << ": not found"s << endl;
     }
 }
 

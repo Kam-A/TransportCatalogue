@@ -1,16 +1,17 @@
 #pragma once
 
-#include <vector>
 #include <string>
-#include "transport_catalogue.h"
+#include <vector>
+
 #include "input_reader.h"
+#include "transport_catalogue.h"
 
-namespace transport_catalogue{
-namespace detail{
+namespace transport_catalogue {
+namespace stat_reader {
 
-std::vector<std::pair<RequestType,std::string>> ReadGetRequest();
-void PrintBus(std::string_view req, const TransportCatalogue::Bus* bus);
-void PrintStop(std::string_view req, std::optional<std::vector<std::string_view>> buses);
+void RequestProcess(TransportCatalogue& catalogue, std::istream& input,std::ostream& output);
+void PrintBusInfo(TransportCatalogue& catalogue, std::string_view name, std::ostream& output);
+void PrintStop(TransportCatalogue& catalogue, std::string_view name, std::ostream& output);
 
 }
 }
