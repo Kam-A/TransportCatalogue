@@ -24,7 +24,7 @@ void TransportCatalogue::AddBus(Bus bus) {
     pointers_to_buses_[buses_.back().name] = &buses_.back();
 }
 
-std::optional<std::vector<std::string_view>> TransportCatalogue::GetBusesByStopName(string_view stop_name) {
+std::optional<std::vector<std::string_view>> TransportCatalogue::GetBusesByStopName(string_view stop_name) const {
     if (GetStopByName(stop_name) == nullptr) {
         return {};
     } else {
@@ -42,44 +42,55 @@ std::optional<std::vector<std::string_view>> TransportCatalogue::GetBusesByStopN
     }
 }
 
-const TransportCatalogue::Stop* TransportCatalogue::GetStopByName(std::string_view stop_name) {
+const Stop* TransportCatalogue::GetStopByName(std::string_view stop_name) const {
     if (pointers_to_stops_.count(stop_name) != 0) {
-        return pointers_to_stops_[stop_name];
+        return pointers_to_stops_.at(stop_name);
     } else {
         return nullptr;
     }
 }
 
-const TransportCatalogue::Bus* TransportCatalogue::GetBusByName(std::string_view bus_name) {
+const Bus* TransportCatalogue::GetBusByName(std::string_view bus_name) const {
     if (pointers_to_buses_.count(bus_name) != 0) {
-        return pointers_to_buses_[bus_name];
+        return pointers_to_buses_.at(bus_name);
     } else {
         return nullptr;
     }
 }
 
-int64_t TransportCatalogue::GetDistanceByStopPair(const Stop* src,const Stop* dst) {
+int64_t TransportCatalogue::GetDistanceByStopPair(const Stop* src,const Stop* dst) const {
     if (stops_distance_.count({src,dst}) != 0) {
-        return stops_distance_[{src,dst}];
+        return stops_distance_.at({src,dst});
     } else {
-        return stops_distance_[{dst,src}];
+        return stops_distance_.at({dst,src});
     }
 }
 
-TransportCatalogue::BusInfo TransportCatalogue::GetBusInfoByBus(const Bus* bus) {
+BusInfo TransportCatalogue::GetBusInfoByBus(const Bus* bus) const {
     BusInfo res;
     res.route_length = 0;
     res.real_route_length = 0;
-    unordered_set<const TransportCatalogue::Stop*> unique_stops(bus->stops.begin(), bus->stops.end());
-    res.stops_number = bus->stops.size();
-    res.unique_stop_number = unique_stops.size();
-    for(int i = 0; i < bus->stops.size() - 1; ++i) {
-        res.route_length += ComputeDistance(bus->stops[i]->coordinates,
-                                         bus->stops[i + 1]->coordinates);
-        res.real_route_length += GetDistanceByStopPair(bus->stops[i], bus->stops[i + 1]);
-        
+    vector<const Stop*> stops;
+    stops.insert(stops.begin(), bus->stops.begin(),bus->stops.end());
+    if (!bus->is_roundtrip)  {
+        for(int i = static_cast<int>(stops.size() - 2); i >= 0; --i) {
+            stops.push_back(stops[i]);
+        }
+    }
+    unordered_set<const Stop*> unique_stops(stops.begin(), stops.end());
+    res.stops_number = static_cast<int>(stops.size());
+    res.unique_stop_number = static_cast<int>(unique_stops.size());
+    for(int i = 0; i < stops.size() - 1; ++i) {
+        res.route_length += ComputeDistance(stops[i]->coordinates,
+                                         stops[i + 1]->coordinates);
+        res.real_route_length += GetDistanceByStopPair(stops[i], stops[i + 1]);
+    
     }
     return res;
+}
+
+const std::map<std::string_view, const Bus*>& TransportCatalogue::GetAllBuses() const {
+    return pointers_to_buses_;
 }
 
 }

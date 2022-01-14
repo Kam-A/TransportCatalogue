@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <vector>
 
+#include "domain.h"
 #include "geo.h"
 
 namespace transport_catalogue {
@@ -27,33 +28,15 @@ struct PairHasher {
 class TransportCatalogue {
     
 public:
-    
-    struct Stop {
-        std::string name;
-        detail::Coordinates coordinates;
-    };
-    
-    struct Bus {
-        std::string name;
-        std::vector<const Stop*> stops;
-    };
-    
-    struct BusInfo {
-        int64_t stops_number;
-        double route_length;
-        double real_route_length;
-        int64_t unique_stop_number;
-    };
-    
     void AddStop(Stop stop);
     void SetDistanceBetweenStops(const Stop* src, const Stop* dst, int64_t distance);
     void AddBus(Bus bus);
-    const Stop* GetStopByName(std::string_view stop_name);
-    const Bus* GetBusByName(std::string_view bus_name);
-    std::optional<std::vector<std::string_view>> GetBusesByStopName(std::string_view stop_name);
-    int64_t GetDistanceByStopPair(const Stop* src, const Stop* dst);
-    BusInfo GetBusInfoByBus(const Bus* bus);
-    
+    const Stop* GetStopByName(std::string_view stop_name) const;
+    const Bus* GetBusByName(std::string_view bus_name) const;
+    std::optional<std::vector<std::string_view>> GetBusesByStopName(std::string_view stop_name) const;
+    int64_t GetDistanceByStopPair(const Stop* src, const Stop* dst) const;
+    BusInfo GetBusInfoByBus(const Bus* bus) const;
+    const std::map<std::string_view, const Bus*>& GetAllBuses() const ;
 private:
     
     std::deque<Bus> buses_;
