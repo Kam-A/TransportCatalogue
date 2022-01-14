@@ -1,5 +1,5 @@
 #include "map_renderer.h"
-#include <algorithm>
+
 #include <set>
 
 namespace transport_catalogue {

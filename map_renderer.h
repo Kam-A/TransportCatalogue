@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <algorithm>
 
 #include "svg.h"
 #include "geo.h"
