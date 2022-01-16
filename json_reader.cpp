@@ -22,13 +22,13 @@ std::vector<std::string_view> GetAllStops(const json::Dict& bus_dict) {
 }
 
 Bus GetBusFromDict(TransportCatalogue& catalogue, const json::Dict& bus_dict) {
-    Bus res;
-    res.name = bus_dict.at("name").AsString();
+    Bus bus;
+    bus.name = bus_dict.at("name").AsString();
     for (const std::string_view bus_stop : GetAllStops(bus_dict)) {
-        res.stops.push_back(catalogue.GetStopByName(bus_stop));
+        bus.stops.push_back(catalogue.GetStopByName(bus_stop));
     }
-    res.is_roundtrip = bus_dict.at("is_roundtrip").AsBool();
-    return res;
+    bus.is_roundtrip = bus_dict.at("is_roundtrip").AsBool();
+    return bus;
 }
 
 void SetRealDistanceForStopFromRequest(TransportCatalogue& catalogue, const json::Dict& stop_dict) {
@@ -74,6 +74,7 @@ json::Dict GetBusesDictFromBuses(const std::optional<std::vector<std::string_vie
         };
     }
 }
+
 json::Dict GetMapAsDict(request_handler::RequestHandler& request_handler, int request_id) {
     std::ostringstream out;
     svg::Document doc =  request_handler.RenderMap();

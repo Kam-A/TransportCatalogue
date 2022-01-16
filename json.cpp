@@ -200,33 +200,12 @@ Node LoadNode(istream& input) {
 
 }  // namespace
 
-Node::Node(Array data) : data_(std::move(data)) {
-}
-
-Node::Node(Dict data) : data_(std::move(data)) {
-}
-
-Node::Node(int data) : data_(data) {
-}
-
-Node::Node(bool data) : data_(data) {
-}
-
-Node::Node(double data) : data_(data) {
-}
-
-Node::Node(std::string data) : data_(std::move(data)) {
-}
-
-Node::Node(std::nullptr_t data) : data_(data) {
-}
-
 bool Node::operator==(const Node& rhs) const {
-    return data_ == rhs.data_;
+    return static_cast<Data>(*this) == rhs;
 }
 
 bool Node::operator!=(const Node& rhs) const {
-    return data_ != rhs.data_;
+    return !(*this == rhs);
 }
 
 std::ostream& operator<<(std::ostream& out, const Dict& dict) {
@@ -305,79 +284,79 @@ std::ostream& operator<<(std::ostream& out, const Node& node) {
 }
 
 bool Node::IsNull() const {
-    return holds_alternative<std::nullptr_t>(data_);
+    return holds_alternative<std::nullptr_t>(*this);
 }
 
 bool Node::IsInt() const {
-    return holds_alternative<int>(data_);
+    return holds_alternative<int>(*this);
 }
 
 bool Node::IsBool() const {
-    return holds_alternative<bool>(data_);
+    return holds_alternative<bool>(*this);
 }
 bool Node::IsDouble() const {
-    return holds_alternative<double>(data_) || IsInt();
+    return holds_alternative<double>(*this) || IsInt();
 }
 
 bool Node::IsPureDouble() const {
-    return holds_alternative<double>(data_);
+    return holds_alternative<double>(*this);
 }
 
 bool Node::IsString() const {
-    return holds_alternative<string>(data_);
+    return holds_alternative<string>(*this);
 }
 
 bool Node::IsArray() const {
-    return holds_alternative<Array>(data_);
+    return holds_alternative<Array>(*this);
 }
 
 bool Node::IsMap() const {
-    return holds_alternative<Dict>(data_);
+    return holds_alternative<Dict>(*this);
 }
 
 const Array& Node::AsArray() const {
     if (!IsArray()) {
         throw logic_error("not array"s);
     }
-    return get<Array>(data_);
+    return get<Array>(*this);
 }
 
 const Dict& Node::AsMap() const {
     if (!IsMap()) {
         throw logic_error("not map"s);
     }
-    return get<Dict>(data_);
+    return get<Dict>(*this);
 }
 
 int Node::AsInt() const {
     if (!IsInt()) {
         throw logic_error("not int"s);
     }
-    return get<int>(data_);
+    return get<int>(*this);
 }
 
 bool Node::AsBool() const {
     if (!IsBool()) {
         throw logic_error("not bool"s);
     }
-    return get<bool>(data_);
+    return get<bool>(*this);
 }
 
 const string& Node::AsString() const {
     if (!IsString()) {
         throw logic_error("not string"s);
     }
-    return get<string>(data_);
+    return get<string>(*this);
 }
 
 double Node::AsDouble() const {
     if (!IsInt() && !IsDouble()) {
         throw logic_error("not double"s);
     }
-    if (const double* data = get_if<double>(&data_)) {
+    if (const double* data = get_if<double>(&*this)) {
         return *data;
     } else {
-        return get<int>(data_);
+        return get<int>(*this);
     }
 }
 
@@ -385,7 +364,7 @@ double Node::AsPureDouble() const {
     if (!IsPureDouble()) {
         throw logic_error("not pure double"s);
     }
-    return get<double>(data_);
+    return get<double>(*this);
 }
 
 Document::Document(Node root)

@@ -23,16 +23,9 @@ public:
     using runtime_error::runtime_error;
 };
 
-class Node {
+class Node final : private Data {
+    using variant::variant;
 public:
-    Node() = default;
-    Node(Array data);
-    Node(Dict data);
-    Node(int data);
-    Node(bool data);
-    Node(double data);
-    Node(std::string data);
-    Node(std::nullptr_t data);
     bool IsNull() const;
     bool IsInt() const;
     bool IsBool() const;
@@ -50,8 +43,7 @@ public:
     const std::string& AsString() const;
     bool operator==(const Node& rhs) const;
     bool operator!=(const Node& rhs) const;
-private:
-    Data data_;
+    
 };
 
 std::ostream& operator<<(std::ostream& out, const Node& node);

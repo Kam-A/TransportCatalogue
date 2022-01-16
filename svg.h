@@ -203,6 +203,7 @@ public:
     virtual ~Drawable() = default;
     virtual void Draw(ObjectContainer& container) const = 0;
 };
+
 /*
  * Класс Circle моделирует элемент <circle> для отображения круга
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
