@@ -80,7 +80,7 @@ BusInfo TransportCatalogue::GetBusInfoByBus(const Bus* bus) const {
     unordered_set<const Stop*> unique_stops(stops.begin(), stops.end());
     res.stops_number = static_cast<int>(stops.size());
     res.unique_stop_number = static_cast<int>(unique_stops.size());
-    for(int i = 0; i < stops.size() - 1; ++i) {
+    for(int i = 0; i < static_cast<int>(stops.size()) - 1; ++i) {
         res.route_length += ComputeDistance(stops[i]->coordinates,
                                          stops[i + 1]->coordinates);
         res.real_route_length += GetDistanceByStopPair(stops[i], stops[i + 1]);
