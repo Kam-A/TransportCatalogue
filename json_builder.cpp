@@ -17,7 +17,7 @@ Node* Builder::GetCurrentNodePtr() {
     return nodes_stack_.back();
 }
 
-KeyContext Builder::Key(std::string key) {
+Builder::KeyContext Builder::Key(std::string key) {
     if (GetCurrentNodePtr()->IsDict()) {
         Dict& current_node = const_cast<Dict&>(GetCurrentNodePtr()->AsDict());
         current_node.emplace(key, key);
@@ -28,65 +28,42 @@ KeyContext Builder::Key(std::string key) {
     return {*this};
 }
 
-bool Builder::StartContainer(Node node) {
+Node* Builder::InsertNode(Node node) {
     if (IsEmpty() && root_.IsNull()) {
         root_ = Node(node);
-        nodes_stack_.push_back(&root_);
+        return &root_;
     } else if (GetCurrentNodePtr()->IsArray()) {
         Array& current_node = const_cast<Array&>(GetCurrentNodePtr()->AsArray());
         current_node.push_back(node);
-        nodes_stack_.push_back(&current_node.back());
+        return &current_node.back();
     } else if (GetCurrentNodePtr()->IsString()) {
         const std::string key = GetCurrentNodePtr()->AsString();
         nodes_stack_.pop_back();
         if (GetCurrentNodePtr()->IsDict()) {
             Dict& current_node = const_cast<Dict&>(GetCurrentNodePtr()->AsDict());
             current_node[key] = node;
-            nodes_stack_.push_back(&current_node[key]);
+            return &current_node[key];
         } else {
-            return false;
+            throw std::logic_error("Insert Value not for the key"s);
         }
     } else {
-        return false;
+        throw std::logic_error("Insert Value not in context"s);
     }
-    return true;
 }
-
-DictItemContext Builder::StartDict() {
-    if (!StartContainer(Dict{})) {
-        throw std::logic_error("StartDict called not in context"s);
-    }
-    return {*this};
-}
-
-ArrayContext Builder::StartArray() {
-    if (!StartContainer(Array{})) {
-        throw std::logic_error("StartArray called not in context"s);
-    }
-    return {*this};
-}
-
-
 
 Builder& Builder::Value(Node::Value value) {
-    if (IsEmpty() && root_.IsNull()) {
-        root_ = value;
-    } else if (GetCurrentNodePtr()->IsArray()) {
-        Array& current_node = const_cast<Array&>(GetCurrentNodePtr()->AsArray());
-        current_node.push_back(value);
-    } else if (GetCurrentNodePtr()->IsString()) {
-        const std::string key = GetCurrentNodePtr()->AsString();
-        nodes_stack_.pop_back();
-        if (GetCurrentNodePtr()->IsDict()) {
-            Dict& current_node = const_cast<Dict&>(GetCurrentNodePtr()->AsDict());
-            current_node[key] = value;
-        } else {
-            throw std::logic_error("Value() called not in context"s);
-        }
-    } else {
-        throw std::logic_error("Value() called not in context"s);
-    }
+    InsertNode(value);
     return *this;
+}
+
+Builder::DictItemContext Builder::StartDict() {
+    nodes_stack_.push_back(InsertNode(Dict{}));
+    return {*this};
+}
+
+Builder::ArrayContext Builder::StartArray() {
+    nodes_stack_.push_back(InsertNode(Array{}));
+    return {*this};
 }
 
 Builder& Builder::EndDict() {
@@ -114,50 +91,39 @@ Node Builder::Build() {
     return root_;
 }
 
-
-DictItemContext KeyContext::Value(Node::Value value) {
-    builder_.Value(value);
-    return {builder_};
-}
-
-DictItemContext KeyContext::StartDict() {
+Builder::DictItemContext Builder::Context::StartDict() {
     builder_.StartDict();
     return {builder_};
 }
 
-ArrayContext KeyContext::StartArray() {
+Builder::ArrayContext Builder::Context::StartArray() {
     builder_.StartArray();
     return {builder_};
 }
 
-KeyContext DictItemContext::Key(std::string key) {
-    builder_.Key(key);
-    return {builder_};
-}
-
-Builder& DictItemContext::EndDict() {
+Builder& Builder::Context::EndDict() {
     builder_.EndDict();
     return builder_;
 }
 
-ArrayContext ArrayContext::Value(Node::Value value) {
+Builder& Builder::Context::EndArray() {
+    builder_.EndArray();
+    return builder_;
+}
+
+Builder::KeyContext Builder::Context::Key(std::string key) {
+    builder_.Key(key);
+    return {builder_};
+}
+
+Builder::DictItemContext Builder::KeyContext::Value(Node::Value value) {
     builder_.Value(value);
     return {builder_};
 }
 
-DictItemContext ArrayContext::StartDict() {
-    builder_.StartDict();
+Builder::ArrayContext Builder::ArrayContext::Value(Node::Value value) {
+    builder_.Value(value);
     return {builder_};
-}
-
-ArrayContext ArrayContext::StartArray() {
-    builder_.StartArray();
-    return {builder_};
-}
-
-Builder& ArrayContext::EndArray() {
-    builder_.EndArray();
-    return builder_;
 }
     
 }
