@@ -36,7 +36,10 @@ public:
     std::optional<std::vector<std::string_view>> GetBusesByStopName(std::string_view stop_name) const;
     int64_t GetDistanceByStopPair(const Stop* src, const Stop* dst) const;
     BusInfo GetBusInfoByBus(const Bus* bus) const;
-    const std::map<std::string_view, const Bus*>& GetAllBuses() const ;
+    const std::map<std::string_view, const Bus*>& GetAllBuses() const;
+    const std::unordered_map<std::string_view, const Stop*>& GetAllStops() const;
+    size_t GetNumberOfStops() const;
+    size_t GetNumberOfBuses() const;
 private:
     
     std::deque<Bus> buses_;

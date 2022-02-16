@@ -18,6 +18,6 @@ struct Requests {
     std::vector<json::Node> stops;
 };
 
-void RequestProcess(TransportCatalogue& catalogue, std::istream& input, std::ostream& output, renderer::MapRenderer& renderer, request_handler::RequestHandler& request_handler);
+void RequestProcess(TransportCatalogue& catalogue, std::istream& input, std::ostream& output, renderer::MapRenderer& renderer, TransportRouter& router, request_handler::RequestHandler& request_handler);
 }
 }

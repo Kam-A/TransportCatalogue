@@ -93,4 +93,16 @@ const std::map<std::string_view, const Bus*>& TransportCatalogue::GetAllBuses() 
     return pointers_to_buses_;
 }
 
+const std::unordered_map<std::string_view, const Stop*>& TransportCatalogue::GetAllStops() const {
+    return pointers_to_stops_;
+}
+
+size_t TransportCatalogue::GetNumberOfStops() const {
+    return stops_.size();
+}
+
+size_t TransportCatalogue::GetNumberOfBuses() const {
+    return buses_.size();
+}
+
 }

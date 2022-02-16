@@ -1,7 +1,9 @@
 #include "json_reader.h"
 #include "json_builder.h"
 #include "request_handler.h"
+#include "transport_router.h"
 
+#include <map>
 #include <string_view>
 #include <vector>
 
@@ -87,6 +89,41 @@ void GetMapAsDict(json::Builder& builder, request_handler::RequestHandler& reque
             .EndDict();
     
 }
+void InsertItemToResponse(json::Builder& builder,const TransportRouter::Item& item) {
+    if (item.type == TransportRouter::ItemType::WAIT) {
+        builder.StartDict()
+                .Key("type").Value("Wait"s)
+                .Key("stop_name").Value(std::string(item.name))
+                .Key("time").Value(item.time)
+            .EndDict();
+    } else if (item.type == TransportRouter::ItemType::BUS) {
+        builder.StartDict()
+                .Key("type").Value("Bus"s)
+                .Key("bus").Value(std::string(item.name))
+                .Key("span_count").Value(item.span_count)
+                .Key("time").Value(item.time)
+            .EndDict();
+    }
+}
+void GetItemMapFromItems(json::Builder& builder, const std::optional<TransportRouter::RouteItems>& items, int request_id) {
+    if (items) {
+        builder.StartDict()
+            .Key("request_id").Value(request_id)
+            .Key("total_time").Value(items.value().total_time)
+            .Key("items")
+            .StartArray();
+        for (const auto& item : items.value().items) {
+            InsertItemToResponse(builder, item);
+        }
+        builder.EndArray();
+        builder.EndDict();
+    } else {
+        builder.StartDict()
+                    .Key("request_id"s).Value(request_id)
+                    .Key("error_message"s).Value("not found"s)
+                .EndDict();
+    }
+}
 
 void StatRequestProcess(const json::Node& request_body, std::ostream& output, request_handler::RequestHandler& request_handler) {
     json::Builder builder;
@@ -99,6 +136,8 @@ void StatRequestProcess(const json::Node& request_body, std::ostream& output, re
             GetBusesDictFromBuses(builder, request_handler.GetBusesByStop(request["name"].AsString()),  request["id"s].AsInt());
         } else if (request["type"s].AsString() == "Map"s) {
             GetMapAsDict(builder, request_handler, request["id"s].AsInt());
+        } else if (request["type"s].AsString() == "Route"s) {
+            GetItemMapFromItems(builder, request_handler.GetRouteByStops(request["from"].AsString(), request["to"].AsString()), request["id"s].AsInt());
         }
     }
     builder.EndArray();
@@ -164,15 +203,29 @@ void SetRenderSettings(renderer::MapRenderer& renderer, const json::Node& reques
     renderer.SetSettings(render_settings);
 }
 
-void RequestProcess(TransportCatalogue& catalogue, std::istream& input, std::ostream& output, renderer::MapRenderer& renderer, request_handler::RequestHandler& request_handler) {
+void SetRoutingSettings(TransportRouter& router, const json::Node& request_body) {
+    json::Dict setting_dict = request_body.AsDict();
+    router.SetSettings(setting_dict.at("bus_wait_time").AsInt(),
+                                       setting_dict.at("bus_velocity").AsDouble());
+}
+
+void RequestProcess(TransportCatalogue& catalogue,
+                    std::istream& input,
+                    std::ostream& output,
+                    renderer::MapRenderer& renderer,
+                    TransportRouter& router,
+                    request_handler::RequestHandler& request_handler) {
     json::Document requests = json::Load(input);
     for (const auto& [request_type, request_body] : requests.GetRoot().AsDict()) {
         if (request_type == "base_requests"s) {
             BaseRequestProcess(catalogue, request_body);
         } else if (request_type == "stat_requests"s) {
+            router.BuildAllRoutes();
             StatRequestProcess(request_body, output, request_handler);
         } else if (request_type == "render_settings"s){
             SetRenderSettings(renderer, request_body);
+        } else if (request_type == "routing_settings"s){
+            SetRoutingSettings(router, request_body);
         }
     }
 }

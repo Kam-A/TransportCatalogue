@@ -1,3 +1,5 @@
+
+#include <fstream>
 #include <iostream>
 #include <tuple>
 #include <vector>
@@ -13,8 +15,9 @@ using namespace std;
 void RequestProcess(transport_catalogue::TransportCatalogue& catalogue, istream& input, ostream& output) {
     using namespace transport_catalogue;
     renderer::MapRenderer renderer;
-    request_handler::RequestHandler request_handler(catalogue, renderer);
-    json_reader::RequestProcess(catalogue, input, output, renderer, request_handler);
+    TransportRouter router(catalogue);
+    request_handler::RequestHandler request_handler(catalogue, renderer, router);
+    json_reader::RequestProcess(catalogue, input, output, renderer, router, request_handler);
     
 }
 
