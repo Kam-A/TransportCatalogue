@@ -92,9 +92,12 @@ public:
     MapRenderer() {
         
     }
+    
     void SetSettings(render_settings settings) {
         render_settings_ = settings;
     }
+    
+    render_settings GetSettings();
     svg::Document RenderBusRoutes(const std::map<std::string_view, const Bus*>& buses_dict) const;
 private:
     void CreateBusNameText(svg::Text& route_name_base,
@@ -108,6 +111,7 @@ private:
     svg::Circle RenderStopSymbol(svg::Point position) const;
     svg::Text RenderStopNameBase(const Stop* stop_ptr, svg::Point position) const;
     svg::Text RenderStopName(const Stop* stop_ptr, svg::Point position) const;
+    
     render_settings render_settings_;
 };
 

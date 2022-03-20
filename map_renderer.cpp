@@ -10,6 +10,10 @@ bool IsZero(double value) {
     return std::abs(value) < 1e-6;
 }
 
+render_settings MapRenderer::GetSettings() {
+    return render_settings_;
+}
+
 svg::Polyline MapRenderer::RenderBusRoute(const Bus* bus_ptr,  SphereProjector& projector, int color_number) const {
     svg::Polyline route;
     for (const auto& stop_ptr : bus_ptr->stops) {

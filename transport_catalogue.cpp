@@ -97,6 +97,10 @@ const std::unordered_map<std::string_view, const Stop*>& TransportCatalogue::Get
     return pointers_to_stops_;
 }
 
+const std::unordered_map<std::pair<const Stop*, const Stop*>, int64_t, detail::PairHasher<const Stop*>> TransportCatalogue::GetStopDistances() const {
+    return stops_distance_;
+}
+
 size_t TransportCatalogue::GetNumberOfStops() const {
     return stops_.size();
 }

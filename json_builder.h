@@ -64,6 +64,7 @@ private:
     bool IsEmpty();
     Node* GetCurrentNodePtr();
     Node* InsertNode(Node node);
+    
     Node root_;
     std::vector<Node*> nodes_stack_;
 };

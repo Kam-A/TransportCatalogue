@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package transport_catalogue_serialize;
+
+message RouterSettings {
+    int32 time = 1;
+    double velocity = 2;
+}
+

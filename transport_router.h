@@ -31,12 +31,25 @@ public:
         std::vector<Item> items;
     };
     
+    struct RouterSettings {
+        int time;
+        double velocity;
+    };
+    
     TransportRouter(const TransportCatalogue& catalogue) : catalogue_(catalogue) {
     }
-    void SetSettings(int time, double velocity);
+    void SetSettings(RouterSettings settings);
+    RouterSettings GetSettings() const;
     void BuildAllRoutes();
     std::optional<RouteItems>  GetRouteByStops(const Stop* start_stop, const Stop* finish_stop) const;
 private:
+    void AddRouteToGraph(const std::string_view bus_name, const Bus* bus_ptr);
+    void InitStopToVertexAndLinkWithEdge();
+    graph::VertexId GetStartWaitVertexByStop(const Stop* stop_ptr) const;
+    graph::VertexId GetStartBusVertexByStop(const Stop* stop_ptr) const;
+    void AddEdgeToItem(graph::VertexId start_vertex, graph::VertexId stop_vertex, Item item);
+    void AddBusEdge(const Stop* start_stop, const Stop* finish_stop, std::string_view bus_name, int span, double distance);
+    
     int bus_wait_time_;
     double bus_velocity_;
     const TransportCatalogue& catalogue_;
@@ -44,11 +57,5 @@ private:
     std::unique_ptr<graph::Router<double>> router_;
     std::map<const Stop*, std::pair<int, int>> stop_to_vertex_pair_;
     std::map<graph::EdgeId, Item> edge_to_item_;
-    void AddRouteToGraph(const std::string_view bus_name, const Bus* bus_ptr);
-    void InitStopToVertexAndLinkWithEdge();
-    graph::VertexId GetStartWaitVertexByStop(const Stop* stop_ptr) const;
-    graph::VertexId GetStartBusVertexByStop(const Stop* stop_ptr) const;
-    void AddEdgeToItem(graph::VertexId start_vertex, graph::VertexId stop_vertex, Item item);
-    void AddBusEdge(const Stop* start_stop, const Stop* finish_stop, std::string_view bus_name, int span, double distance);
 };
 }

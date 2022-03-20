@@ -38,6 +38,7 @@ public:
     BusInfo GetBusInfoByBus(const Bus* bus) const;
     const std::map<std::string_view, const Bus*>& GetAllBuses() const;
     const std::unordered_map<std::string_view, const Stop*>& GetAllStops() const;
+    const std::unordered_map<std::pair<const Stop*, const Stop*>, int64_t, detail::PairHasher<const Stop*>> GetStopDistances() const;
     size_t GetNumberOfStops() const;
     size_t GetNumberOfBuses() const;
 private:

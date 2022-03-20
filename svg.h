@@ -260,6 +260,7 @@ public:
     
 private:
     void RenderObject(const RenderContext& context) const override;
+    
     Point position_;
     Point offset_;
     uint32_t font_size_ = 1;

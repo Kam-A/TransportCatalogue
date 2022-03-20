@@ -90,7 +90,6 @@ Polyline& Polyline::AddPoint(Point point) {
     return *this;
 }
 
-// <polyline points="0,100 50,25 50,75 100,0" />
 void Polyline::RenderObject(const RenderContext& context) const {
     auto& out = context.out;
     out << "<polyline points=\""s;

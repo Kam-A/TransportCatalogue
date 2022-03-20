@@ -12,6 +12,7 @@ class Node;
 using Dict = std::map<std::string, Node>;
 using Array = std::vector<Node>;
 using Data = std::variant<std::nullptr_t, Array, Dict, bool, int, double, std::string>;
+
 class ParsingError : public std::runtime_error {
 public:
     using runtime_error::runtime_error;

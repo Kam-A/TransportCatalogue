@@ -1,6 +1,7 @@
 #include "json_reader.h"
 #include "json_builder.h"
 #include "request_handler.h"
+#include "serialization.h"
 #include "transport_router.h"
 
 #include <map>
@@ -205,8 +206,13 @@ void SetRenderSettings(renderer::MapRenderer& renderer, const json::Node& reques
 
 void SetRoutingSettings(TransportRouter& router, const json::Node& request_body) {
     json::Dict setting_dict = request_body.AsDict();
-    router.SetSettings(setting_dict.at("bus_wait_time").AsInt(),
-                                       setting_dict.at("bus_velocity").AsDouble());
+    router.SetSettings({setting_dict.at("bus_wait_time").AsInt(),
+                                       setting_dict.at("bus_velocity").AsDouble()});
+}
+
+void SetSerializationSettings(Serializer& serialiser, const json::Node& request_body) {
+    json::Dict setting_dict = request_body.AsDict();
+    serialiser.SetSettings(setting_dict.at("file").AsString());
 }
 
 void RequestProcess(TransportCatalogue& catalogue,
@@ -226,6 +232,44 @@ void RequestProcess(TransportCatalogue& catalogue,
             SetRenderSettings(renderer, request_body);
         } else if (request_type == "routing_settings"s){
             SetRoutingSettings(router, request_body);
+        }
+    }
+}
+
+void MakeBaseRequestProcess(TransportCatalogue& catalogue,
+                            std::istream& input,
+                            renderer::MapRenderer& renderer,
+                            TransportRouter& router,
+                            Serializer& serialiser) {
+    json::Document requests = json::Load(input);
+    for (const auto& [request_type, request_body] : requests.GetRoot().AsDict()) {
+        if (request_type == "base_requests"s) {
+            BaseRequestProcess(catalogue, request_body);
+        } else if (request_type == "render_settings"s){
+            SetRenderSettings(renderer, request_body);
+        } else if (request_type == "routing_settings"s){
+            SetRoutingSettings(router, request_body);
+        } else if (request_type == "serialization_settings"s){
+            SetSerializationSettings(serialiser, request_body);
+        }
+    }
+    serialiser.SerializeBaseToFile();
+}
+
+void FromDbRequestProcess(TransportCatalogue& catalogue,
+                    std::istream& input,
+                    std::ostream& output,
+                    request_handler::RequestHandler& request_handler,
+                    TransportRouter& router,
+                    Serializer& serialiser) {
+    json::Document requests = json::Load(input);
+    for (const auto& [request_type, request_body] : requests.GetRoot().AsDict()) {
+        if (request_type == "stat_requests"s) {
+            serialiser.DeserializeBaseFromFile();
+            router.BuildAllRoutes();
+            StatRequestProcess(request_body, output, request_handler);
+        } else if (request_type == "serialization_settings"s){
+            SetSerializationSettings(serialiser, request_body);
         }
     }
 }

@@ -6,9 +6,13 @@
 
 namespace transport_catalogue {
 
-void TransportRouter::SetSettings(int time, double velocity) {
-    bus_wait_time_ = time;
-    bus_velocity_ = velocity * 1000 / 60;
+void TransportRouter::SetSettings(RouterSettings settings) {
+    bus_wait_time_ = settings.time;
+    bus_velocity_ = settings.velocity;
+}
+
+TransportRouter::RouterSettings TransportRouter::GetSettings() const {
+    return {bus_wait_time_, bus_velocity_};
 }
 
 graph::VertexId TransportRouter::GetStartWaitVertexByStop(const Stop* stop_ptr) const {
@@ -27,7 +31,7 @@ void TransportRouter::AddBusEdge(const Stop* start_stop, const Stop* finish_stop
     Item item;
     item.type = ItemType::BUS;
     item.name = bus_name;
-    item.time = distance / bus_velocity_;
+    item.time = distance /(bus_velocity_ *  1000 / 60);
     item.span_count = span;
     AddEdgeToItem(GetStartBusVertexByStop(start_stop),
                   GetStartWaitVertexByStop(finish_stop),
@@ -53,7 +57,10 @@ void TransportRouter::InitStopToVertexAndLinkWithEdge() {
     graph::VertexId vertex_id = 0;
     for (const auto& [stop_name, stop_ptr] : catalogue_.GetAllStops()) {
         stop_to_vertex_pair_[stop_ptr] = {vertex_id, vertex_id + 1};
-        edge_to_item_[route_graph_->AddEdge({vertex_id, vertex_id + 1, static_cast<double>(bus_wait_time_)})] = {ItemType::WAIT, stop_name, static_cast<double>(bus_wait_time_), 1};
+        edge_to_item_[route_graph_->AddEdge({vertex_id, vertex_id + 1, static_cast<double>(bus_wait_time_)})] = {ItemType::WAIT,
+                                                                                                                stop_name,
+                                                                                                                static_cast<double>(bus_wait_time_),
+                                                                                                                1};
         vertex_id += 2;
     }
 }
