@@ -1,0 +1,972 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		7DBC082D58B143459E099C53 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 29AEF2A7E33A4E808EAA14BD /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				E5FF1A0CA590E3576426B018 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		92E671AC5CB94E698916405F /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7085EF59F93149A6B54E49AD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				6C7BA28E1C4F21BDB02DA8D9 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				68A0D563D4A040788270BE3F /* PBXTargetDependency */,
+				DFBF64C3A82A4B8AB71B9C3F /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		03B5E0174BE949EF80A596CB /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.cpp */ = {isa = PBXBuildFile; fileRef = 3F88481E064E44668B54BEC5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.cpp */; };
+		081AFB76741541EDB8F9E218 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h */ = {isa = PBXBuildFile; fileRef = 2EB04765095D48D29551DA9A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h */; };
+		090453B9ABC343669DAB6DE3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.cpp */ = {isa = PBXBuildFile; fileRef = CD796C650E3B4689B549DB7E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.cpp */; };
+		0B3BA42B444D4C05938EB5BC /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.h */ = {isa = PBXBuildFile; fileRef = 2584697A20514590A97BAB0C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.h */; };
+		1934C3C3BDFA42C1A38A583C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h */ = {isa = PBXBuildFile; fileRef = 6FDE6B678C574766A9464AD3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h */; };
+		2806581B4A2E41288DE841BC /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.cpp */ = {isa = PBXBuildFile; fileRef = FD532108A4DC43D995121EDD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.cpp */; };
+		3006FE71CE704FDCBD24056B /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h.rule */ = {isa = PBXBuildFile; fileRef = A091AB8C4EDA48FAA1C2A623 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h.rule */; };
+		34DC8C7457C34431AE0C7763 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.h */ = {isa = PBXBuildFile; fileRef = B27A75B2139146C99818F5B5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.h */; };
+		3696BF992C124AF19627DD5B /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.cpp */ = {isa = PBXBuildFile; fileRef = 3EC7854CC7764DB6A34395B1 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.cpp */; };
+		3887BB22AC0C48A49663A234 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.cpp */ = {isa = PBXBuildFile; fileRef = 3E2A6442700440A08C019B47 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.cpp */; };
+		45B65882E8A44EEBB88EA84B /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.cpp */ = {isa = PBXBuildFile; fileRef = 14EC46C536AF4CA5A818B08A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.cpp */; };
+		4A0539156BB34D9B9A537893 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h.rule */ = {isa = PBXBuildFile; fileRef = 650A342A487644F19048BD40 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h.rule */; };
+		4D69724E75D14F20BF36657D /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.cpp */ = {isa = PBXBuildFile; fileRef = 09CF6E81BEA14A0DA1C93342 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.cpp */; };
+		50B9A0D5579C4B3BA11D9921 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h.rule */ = {isa = PBXBuildFile; fileRef = 18BDD166ECB5421FA67FEF3E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h.rule */; };
+		512631BDB3D8497D93FCDF67 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.h */ = {isa = PBXBuildFile; fileRef = 49359466012A4922AA10B112 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.h */; };
+		5F514156C1EC4FE9843991FD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.h */ = {isa = PBXBuildFile; fileRef = 809B8330EA8F4E19992C2920 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.h */; };
+		7D80E3EA20264E47ADC0AE97 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/graph.h */ = {isa = PBXBuildFile; fileRef = 1A663D9076D24561BD47E00D /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/graph.h */; };
+		7DCA4BB02AFE408CA5ADB117 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h */ = {isa = PBXBuildFile; fileRef = 53212CBD294B442883EEFE23 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h */; };
+		85389B1FAC704FB2A449BF40 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.h */ = {isa = PBXBuildFile; fileRef = 635AF4F03CF1496CA8720AE8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.h */; };
+		87F116AFE39C4699BDC6DEF8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.cpp */ = {isa = PBXBuildFile; fileRef = E58AB3AE2E6A4480A16E1CD0 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.cpp */; };
+		8D72FA6066074EAC8FF7F5C2 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/main.cpp */ = {isa = PBXBuildFile; fileRef = 8E755252BD4A41F7B564C39C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/main.cpp */; };
+		8EA030A4164944C6A3FF8FC0 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/ranges.h */ = {isa = PBXBuildFile; fileRef = 5CA03E4F560E4AF993C5FF45 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/ranges.h */; };
+		98B8F552B7174B66B1750FCE /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.h */ = {isa = PBXBuildFile; fileRef = 97E892B548D1423C8199FEC4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.h */; };
+		9C566D12E6914615A29B0088 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.h */ = {isa = PBXBuildFile; fileRef = FA8423CCFF8B428BACCE6326 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.h */; };
+		A1AEFFE5DB214A4F9FE65C5A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h.rule */ = {isa = PBXBuildFile; fileRef = EF3E154300784CFE8438B5F7 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h.rule */; };
+		A2718D9CF99741C98198B9B7 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.cpp */ = {isa = PBXBuildFile; fileRef = 59B5378123844731B0C612B1 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.cpp */; };
+		A4159001528D4407932589B3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.h */ = {isa = PBXBuildFile; fileRef = 59ABB3A848274DBE8FEC50D4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.h */; };
+		B0F11B2C7DB64E6E8ACD3AD4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.cpp */ = {isa = PBXBuildFile; fileRef = 783E34E6F5BD4B469AF534FC /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.cpp */; };
+		B58D89409E914B47A4C8CB00 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.cc */ = {isa = PBXBuildFile; fileRef = EE59D36E4AD840D38B87F55E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.cc */; };
+		BD5FBFB25CF9455AA7B005FD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.cc */ = {isa = PBXBuildFile; fileRef = 5469F66BE6454DB99F5CF9B3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.cc */; };
+		D0A0BFAA1FA240F9BBFD9322 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.h */ = {isa = PBXBuildFile; fileRef = B9C28EDABF734E25B18AF3D8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.h */; };
+		D22D46121C0345639B44E471 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.cc */ = {isa = PBXBuildFile; fileRef = 8FE59F59F31047FB8889A242 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.cc */; };
+		DDCCADC433364C8DB3528F87 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A3293FADEB30415CA09E0562 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/CMakeLists.txt */; };
+		DE4D0B0C9BB94205B6B19AFF /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.cc */ = {isa = PBXBuildFile; fileRef = E4E615E0F5B34D79BE87D238 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.cc */; };
+		E089FD3E3A0D41D29F8F88A5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.h */ = {isa = PBXBuildFile; fileRef = 752E67A5093F4A13A08A63AB /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.h */; };
+		E7A7F40E8C13484AA6FBA000 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/router.h */ = {isa = PBXBuildFile; fileRef = 8B09BB5B1762476DA4780909 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/router.h */; };
+		EB207FD2806D41398E54126E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.h */ = {isa = PBXBuildFile; fileRef = C497A748BC134038A686F8FA /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.h */; };
+		EBB4B913A2DC4EE3A5F5E7DD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h */ = {isa = PBXBuildFile; fileRef = 5DBDA57F786E45E1B09795F3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h */; };
+		FCB677AF5DDC429E8EE7C1DA /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.cpp */ = {isa = PBXBuildFile; fileRef = 2A982C082CFD4DB099A3534A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		091EA82291694BB0A004EA8B /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		19CD3CC84B4746E184DC302E /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		AE9AAF67C2284CB598C4BBD1 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		FCF8A23713324A9688509331 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		A1E4183DFC564940A8A85A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C554FC6DF8E7482190A68742 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DBC082D58B143459E099C53;
+			remoteInfo = ZERO_CHECK;
+		};
+		B764496EFE8C4D79AA86D2AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C554FC6DF8E7482190A68742 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 276984891A684357A1A73194;
+			remoteInfo = transport_catalogue;
+		};
+		E0327F438E7B424A87252989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C554FC6DF8E7482190A68742 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DBC082D58B143459E099C53;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09CF6E81BEA14A0DA1C93342 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = map_renderer.cpp; path = map_renderer.cpp; sourceTree = SOURCE_ROOT; };
+		14EC46C536AF4CA5A818B08A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_builder.cpp; path = json_builder.cpp; sourceTree = SOURCE_ROOT; };
+		18BDD166ECB5421FA67FEF3E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = map_renderer.pb.h.rule; path = build/map_renderer.pb.h.rule; sourceTree = SOURCE_ROOT; };
+		1A663D9076D24561BD47E00D /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/graph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = graph.h; path = graph.h; sourceTree = SOURCE_ROOT; };
+		2584697A20514590A97BAB0C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = svg.h; path = svg.h; sourceTree = SOURCE_ROOT; };
+		2A982C082CFD4DB099A3534A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = geo.cpp; path = geo.cpp; sourceTree = SOURCE_ROOT; };
+		2EB04765095D48D29551DA9A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = map_renderer.pb.h; path = build/map_renderer.pb.h; sourceTree = SOURCE_ROOT; };
+		3E2A6442700440A08C019B47 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = transport_router.cpp; path = transport_router.cpp; sourceTree = SOURCE_ROOT; };
+		3EC7854CC7764DB6A34395B1 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = svg.cpp; path = svg.cpp; sourceTree = SOURCE_ROOT; };
+		3F88481E064E44668B54BEC5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json.cpp; path = json.cpp; sourceTree = SOURCE_ROOT; };
+		49359466012A4922AA10B112 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = geo.h; path = geo.h; sourceTree = SOURCE_ROOT; };
+		53212CBD294B442883EEFE23 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = transport_catalogue.pb.h; path = build/transport_catalogue.pb.h; sourceTree = SOURCE_ROOT; };
+		5469F66BE6454DB99F5CF9B3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = svg.pb.cc; path = build/svg.pb.cc; sourceTree = SOURCE_ROOT; };
+		59ABB3A848274DBE8FEC50D4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = serialization.h; path = serialization.h; sourceTree = SOURCE_ROOT; };
+		59B5378123844731B0C612B1 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = serialization.cpp; path = serialization.cpp; sourceTree = SOURCE_ROOT; };
+		5CA03E4F560E4AF993C5FF45 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/ranges.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ranges.h; path = ranges.h; sourceTree = SOURCE_ROOT; };
+		5DBDA57F786E45E1B09795F3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = transport_router.pb.h; path = build/transport_router.pb.h; sourceTree = SOURCE_ROOT; };
+		635AF4F03CF1496CA8720AE8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = domain.h; path = domain.h; sourceTree = SOURCE_ROOT; };
+		650A342A487644F19048BD40 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = svg.pb.h.rule; path = build/svg.pb.h.rule; sourceTree = SOURCE_ROOT; };
+		6FDE6B678C574766A9464AD3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = svg.pb.h; path = build/svg.pb.h; sourceTree = SOURCE_ROOT; };
+		752E67A5093F4A13A08A63AB /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_builder.h; path = json_builder.h; sourceTree = SOURCE_ROOT; };
+		783E34E6F5BD4B469AF534FC /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = request_handler.cpp; path = request_handler.cpp; sourceTree = SOURCE_ROOT; };
+		809B8330EA8F4E19992C2920 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_reader.h; path = json_reader.h; sourceTree = SOURCE_ROOT; };
+		8B09BB5B1762476DA4780909 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/router.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = router.h; path = router.h; sourceTree = SOURCE_ROOT; };
+		8E755252BD4A41F7B564C39C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		8FE59F59F31047FB8889A242 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = transport_router.pb.cc; path = build/transport_router.pb.cc; sourceTree = SOURCE_ROOT; };
+		97E892B548D1423C8199FEC4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = transport_router.h; path = transport_router.h; sourceTree = SOURCE_ROOT; };
+		A091AB8C4EDA48FAA1C2A623 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = transport_router.pb.h.rule; path = build/transport_router.pb.h.rule; sourceTree = SOURCE_ROOT; };
+		A3293FADEB30415CA09E0562 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B27A75B2139146C99818F5B5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = json.h; sourceTree = SOURCE_ROOT; };
+		B9C28EDABF734E25B18AF3D8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = map_renderer.h; path = map_renderer.h; sourceTree = SOURCE_ROOT; };
+		C497A748BC134038A686F8FA /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = transport_catalogue.h; path = transport_catalogue.h; sourceTree = SOURCE_ROOT; };
+		CD796C650E3B4689B549DB7E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = transport_catalogue.cpp; path = transport_catalogue.cpp; sourceTree = SOURCE_ROOT; };
+		E4E615E0F5B34D79BE87D238 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = map_renderer.pb.cc; path = build/map_renderer.pb.cc; sourceTree = SOURCE_ROOT; };
+		E58AB3AE2E6A4480A16E1CD0 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_reader.cpp; path = json_reader.cpp; sourceTree = SOURCE_ROOT; };
+		EA43EAD145D54F2AA296949C /* transport_catalogue */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = transport_catalogue; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE59D36E4AD840D38B87F55E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = transport_catalogue.pb.cc; path = build/transport_catalogue.pb.cc; sourceTree = SOURCE_ROOT; };
+		EF3E154300784CFE8438B5F7 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = transport_catalogue.pb.h.rule; path = build/transport_catalogue.pb.h.rule; sourceTree = SOURCE_ROOT; };
+		FA8423CCFF8B428BACCE6326 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = request_handler.h; path = request_handler.h; sourceTree = SOURCE_ROOT; };
+		FB505C46291543F283E54488 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FD532108A4DC43D995121EDD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = domain.cpp; path = domain.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		735FF1FD9DE54D50A673D4EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11DC3D6879F1414BB3ADB53A /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EB04765095D48D29551DA9A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h */,
+				6FDE6B678C574766A9464AD3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h */,
+				53212CBD294B442883EEFE23 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h */,
+				5DBDA57F786E45E1B09795F3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h */,
+				635AF4F03CF1496CA8720AE8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.h */,
+				49359466012A4922AA10B112 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.h */,
+				1A663D9076D24561BD47E00D /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/graph.h */,
+				B27A75B2139146C99818F5B5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.h */,
+				752E67A5093F4A13A08A63AB /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.h */,
+				809B8330EA8F4E19992C2920 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.h */,
+				B9C28EDABF734E25B18AF3D8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.h */,
+				5CA03E4F560E4AF993C5FF45 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/ranges.h */,
+				FA8423CCFF8B428BACCE6326 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.h */,
+				8B09BB5B1762476DA4780909 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/router.h */,
+				59ABB3A848274DBE8FEC50D4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.h */,
+				2584697A20514590A97BAB0C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.h */,
+				C497A748BC134038A686F8FA /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.h */,
+				97E892B548D1423C8199FEC4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		297A3A2936014B04971A8EBA /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				7AA4868C3C5C4858911BDDA8 /* CMake Rules */,
+				FB505C46291543F283E54488 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		2B080B65657145EE9A2D4051 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4E615E0F5B34D79BE87D238 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.cc */,
+				5469F66BE6454DB99F5CF9B3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.cc */,
+				EE59D36E4AD840D38B87F55E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.cc */,
+				8FE59F59F31047FB8889A242 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.cc */,
+				FD532108A4DC43D995121EDD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.cpp */,
+				2A982C082CFD4DB099A3534A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.cpp */,
+				3F88481E064E44668B54BEC5 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.cpp */,
+				14EC46C536AF4CA5A818B08A /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.cpp */,
+				E58AB3AE2E6A4480A16E1CD0 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.cpp */,
+				8E755252BD4A41F7B564C39C /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/main.cpp */,
+				09CF6E81BEA14A0DA1C93342 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.cpp */,
+				783E34E6F5BD4B469AF534FC /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.cpp */,
+				59B5378123844731B0C612B1 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.cpp */,
+				3EC7854CC7764DB6A34395B1 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.cpp */,
+				CD796C650E3B4689B549DB7E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.cpp */,
+				3E2A6442700440A08C019B47 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		556FDC83259E42069B30A728 /* transport_catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				2B080B65657145EE9A2D4051 /* Source Files */,
+				11DC3D6879F1414BB3ADB53A /* Header Files */,
+				699365A1CCE34E8B9BB66E71 /* CMake Rules */,
+				A3293FADEB30415CA09E0562 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/CMakeLists.txt */,
+			);
+			name = transport_catalogue;
+			sourceTree = "<group>";
+		};
+		699365A1CCE34E8B9BB66E71 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				18BDD166ECB5421FA67FEF3E /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h.rule */,
+				650A342A487644F19048BD40 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h.rule */,
+				EF3E154300784CFE8438B5F7 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h.rule */,
+				A091AB8C4EDA48FAA1C2A623 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7AA4868C3C5C4858911BDDA8 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8024C4C9DC0C4293B34A570A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E258E088963A448BB4525B40 = {
+			isa = PBXGroup;
+			children = (
+				556FDC83259E42069B30A728 /* transport_catalogue */,
+				297A3A2936014B04971A8EBA /* ALL_BUILD */,
+				FC9C545E33C144108766F0E9 /* Products */,
+				8024C4C9DC0C4293B34A570A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC9C545E33C144108766F0E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA43EAD145D54F2AA296949C /* transport_catalogue */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		276984891A684357A1A73194 /* transport_catalogue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9445999F41C04DA5852E365A /* Build configuration list for PBXNativeTarget "transport_catalogue" */;
+			buildPhases = (
+				3939EE68D1F18F2978D4DF4D /* Generate transport_catalogue.pb.cc */,
+				E6569D6765BCB8DEA966F4E9 /* Generate svg.pb.cc */,
+				C36EA92A44D5286C2A64098B /* Generate map_renderer.pb.cc */,
+				506D94B860624ACB5EB13B07 /* Generate transport_router.pb.cc */,
+				C3F3DF32408C43B28BA4E560 /* Sources */,
+				735FF1FD9DE54D50A673D4EF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B86B124A0764D5C82836752 /* PBXTargetDependency */,
+			);
+			name = transport_catalogue;
+			productName = transport_catalogue;
+			productReference = EA43EAD145D54F2AA296949C /* transport_catalogue */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C554FC6DF8E7482190A68742 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1320;
+			};
+			buildConfigurationList = 9BC33BF4F5E24BA69F6D8A71 /* Build configuration list for PBXProject "Transport_catalogue" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				091EA82291694BB0A004EA8B /* Debug */,
+				19CD3CC84B4746E184DC302E /* Release */,
+				AE9AAF67C2284CB598C4BBD1 /* MinSizeRel */,
+				FCF8A23713324A9688509331 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = E258E088963A448BB4525B40;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				92E671AC5CB94E698916405F /* ALL_BUILD */,
+				7DBC082D58B143459E099C53 /* ZERO_CHECK */,
+				276984891A684357A1A73194 /* transport_catalogue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3939EE68D1F18F2978D4DF4D /* Generate transport_catalogue.pb.cc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.proto,"/Users/user/protobuf/protobuf-3.19.4/bin/protoc"			);
+			name = "Generate transport_catalogue.pb.cc";
+			outputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.cc,/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.h			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.proto
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.proto
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.proto
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.proto
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		506D94B860624ACB5EB13B07 /* Generate transport_router.pb.cc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.proto,"/Users/user/protobuf/protobuf-3.19.4/bin/protoc"			);
+			name = "Generate transport_router.pb.cc";
+			outputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.cc,/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.h			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.proto
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.proto
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.proto
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.proto
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		6C7BA28E1C4F21BDB02DA8D9 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C36EA92A44D5286C2A64098B /* Generate map_renderer.pb.cc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.proto,"/Users/user/protobuf/protobuf-3.19.4/bin/protoc"			);
+			name = "Generate map_renderer.pb.cc";
+			outputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.cc,/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.h			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.proto
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.proto
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.proto
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.proto
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		E5FF1A0CA590E3576426B018 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  make -f /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  make -f /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  make -f /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  make -f /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		E6569D6765BCB8DEA966F4E9 /* Generate svg.pb.cc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.proto,"/Users/user/protobuf/protobuf-3.19.4/bin/protoc"			);
+			name = "Generate svg.pb.cc";
+			outputPaths = (
+/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.cc,/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.h			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.proto
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.proto
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.proto
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build
+  /Users/user/protobuf/protobuf-3.19.4/bin/protoc --cpp_out /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build -I /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.proto
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3F3DF32408C43B28BA4E560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4D0B0C9BB94205B6B19AFF /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/map_renderer.pb.cc */,
+				BD5FBFB25CF9455AA7B005FD /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/svg.pb.cc */,
+				B58D89409E914B47A4C8CB00 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_catalogue.pb.cc */,
+				D22D46121C0345639B44E471 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/transport_router.pb.cc */,
+				2806581B4A2E41288DE841BC /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/domain.cpp */,
+				FCB677AF5DDC429E8EE7C1DA /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/geo.cpp */,
+				03B5E0174BE949EF80A596CB /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json.cpp */,
+				45B65882E8A44EEBB88EA84B /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_builder.cpp */,
+				87F116AFE39C4699BDC6DEF8 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/json_reader.cpp */,
+				8D72FA6066074EAC8FF7F5C2 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/main.cpp */,
+				4D69724E75D14F20BF36657D /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/map_renderer.cpp */,
+				B0F11B2C7DB64E6E8ACD3AD4 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/request_handler.cpp */,
+				A2718D9CF99741C98198B9B7 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/serialization.cpp */,
+				3696BF992C124AF19627DD5B /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/svg.cpp */,
+				090453B9ABC343669DAB6DE3 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_catalogue.cpp */,
+				3887BB22AC0C48A49663A234 /* /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/transport_router.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68A0D563D4A040788270BE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 276984891A684357A1A73194 /* transport_catalogue */;
+			targetProxy = B764496EFE8C4D79AA86D2AF /* PBXContainerItemProxy */;
+		};
+		9B86B124A0764D5C82836752 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DBC082D58B143459E099C53 /* ZERO_CHECK */;
+			targetProxy = A1E4183DFC564940A8A85A2F /* PBXContainerItemProxy */;
+		};
+		DFBF64C3A82A4B8AB71B9C3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DBC082D58B143459E099C53 /* ZERO_CHECK */;
+			targetProxy = E0327F438E7B424A87252989 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08B847DF03A348C4AA31C75B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/build;
+			};
+			name = Debug;
+		};
+		245669F6F1854A5997CE86BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/user/protobuf/protobuf-3.19.4/include",/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobufd.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = transport_catalogue;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3EBFE669482445A6A6D4AABA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		695D0437081C433EBA6AC35E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/user/protobuf/protobuf-3.19.4/include",/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-loptimized","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobuf.a","-ldebug","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobufd.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = transport_catalogue;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		82A5821377384C3580012BDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/build;
+			};
+			name = Release;
+		};
+		9E064CB05B33422BB2F3967E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		9E8E45AB69A44484914D77AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/user/protobuf/protobuf-3.19.4/include",/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-loptimized","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobuf.a","-ldebug","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobufd.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = transport_catalogue;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		9F45EE3ED70F43A9AC21095A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A50771B05B524002BDF7262B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A682E04E0F744E7A80D35DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		ACFA419E8F4143B99C614495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B9AE0A6C7A13462AB11AE34B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/user/protobuf/protobuf-3.19.4/include",/Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","-loptimized","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobuf.a","-ldebug","/Users/user/protobuf/protobuf-3.19.4/lib/libprotobufd.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = transport_catalogue;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C5640AB0EAE3434483F2CA87 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build/build;
+			};
+			name = MinSizeRel;
+		};
+		E62F5344E3134A59B1245057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		EB694825337A40A49D252755 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F33C97EC33A84971ACCA20D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/user/learning_temp/c_plus/sprint_nine/transport_catalogue/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29AEF2A7E33A4E808EAA14BD /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33C97EC33A84971ACCA20D4 /* Debug */,
+				ACFA419E8F4143B99C614495 /* Release */,
+				A50771B05B524002BDF7262B /* MinSizeRel */,
+				EB694825337A40A49D252755 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7085EF59F93149A6B54E49AD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62F5344E3134A59B1245057 /* Debug */,
+				A682E04E0F744E7A80D35DA6 /* Release */,
+				3EBFE669482445A6A6D4AABA /* MinSizeRel */,
+				9F45EE3ED70F43A9AC21095A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9445999F41C04DA5852E365A /* Build configuration list for PBXNativeTarget "transport_catalogue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245669F6F1854A5997CE86BA /* Debug */,
+				9E8E45AB69A44484914D77AC /* Release */,
+				695D0437081C433EBA6AC35E /* MinSizeRel */,
+				B9AE0A6C7A13462AB11AE34B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9BC33BF4F5E24BA69F6D8A71 /* Build configuration list for PBXProject "Transport_catalogue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B847DF03A348C4AA31C75B /* Debug */,
+				82A5821377384C3580012BDE /* Release */,
+				C5640AB0EAE3434483F2CA87 /* MinSizeRel */,
+				9E064CB05B33422BB2F3967E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C554FC6DF8E7482190A68742 /* Project object */;
+}

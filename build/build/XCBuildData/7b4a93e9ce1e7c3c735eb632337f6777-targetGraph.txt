@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+ZERO_CHECK in Transport_catalogue, no dependencies
+transport_catalogue in Transport_catalogue, depends on:
+ZERO_CHECK in Transport_catalogue (explicit)
+ALL_BUILD in Transport_catalogue, depends on:
+transport_catalogue in Transport_catalogue (explicit)
+ZERO_CHECK in Transport_catalogue (explicit)
